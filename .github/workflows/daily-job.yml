@@ -1,0 +1,29 @@
+name: Daily JS Job
+
+on:
+  schedule:
+    # Runs every day at 02:00 UTC
+    - cron: '0 2 * * *'
+
+  # Optional: allow manual run from GitHub UI
+  workflow_dispatch:
+
+jobs:
+  run-daily-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+        # or: npm install
+
+      - name: Run daily script
+        run: node scripts/daily-task.js
