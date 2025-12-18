@@ -2,10 +2,7 @@ name: Daily JS Job
 
 on:
   schedule:
-    # Runs every day at 02:00 UTC
-    - cron: '0 2 * * *'
-
-  # Optional: allow manual run from GitHub UI
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
