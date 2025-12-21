@@ -2,7 +2,7 @@ name: Daily JS Job
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/14 * * * *'
   workflow_dispatch:
 
 jobs:

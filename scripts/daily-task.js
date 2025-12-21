@@ -9,4 +9,7 @@ console.log('Daily script running at:', new Date().toISOString())
 
 fetch('https://e-commerce-0dit.onrender.com/api/products?search=&categoryId=&sortBy=&sortOrder=ASC&page=1').then(data => { })
 
+fetch('https://restro-menu-tie0.onrender.com/restaurants').then(data => { })
+
+
 process.exit(0)
